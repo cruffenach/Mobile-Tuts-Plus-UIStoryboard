@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DynamicCellsTableViewController.h
 //  MobileTutsStoryboarding
 //
 //  Created by Collin Ruffenach on 10/30/11.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface DynamicCellsTableViewController : UITableViewController
 
 @end

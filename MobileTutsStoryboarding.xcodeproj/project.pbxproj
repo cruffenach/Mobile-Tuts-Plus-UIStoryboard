@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1D1774146109B900D11193 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1D1773146109B900D11193 /* QuartzCore.framework */; };
+		0B1D1777146109C500D11193 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B1D1776146109C500D11193 /* CoreImage.framework */; };
+		0B1D17A4146254A000D11193 /* CustomPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1D17A31462549F00D11193 /* CustomPresentedViewController.m */; };
+		0B361D07145FB1E700D4B567 /* FadeSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B361D06145FB1E700D4B567 /* FadeSegue.m */; };
 		0B65ACB8145E48A70061A994 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B65ACB7145E48A70061A994 /* UIKit.framework */; };
 		0B65ACBA145E48A70061A994 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B65ACB9145E48A70061A994 /* Foundation.framework */; };
 		0B65ACBC145E48A70061A994 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B65ACBB145E48A70061A994 /* CoreGraphics.framework */; };
@@ -14,23 +18,32 @@
 		0B65ACC4145E48A80061A994 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B65ACC3145E48A80061A994 /* main.m */; };
 		0B65ACC8145E48A80061A994 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B65ACC7145E48A80061A994 /* AppDelegate.m */; };
 		0B65ACCB145E48A80061A994 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B65ACC9145E48A80061A994 /* MainStoryboard.storyboard */; };
-		0B65ACCE145E48A80061A994 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B65ACCD145E48A80061A994 /* ViewController.m */; };
+		0B65ACCE145E48A80061A994 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B65ACCD145E48A80061A994 /* ModalViewController.m */; };
+		0B65ACDA145E51ED0061A994 /* DynamicCellsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B65ACD9145E51ED0061A994 /* DynamicCellsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B1D1773146109B900D11193 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0B1D1776146109C500D11193 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		0B1D17A21462549F00D11193 /* CustomPresentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPresentedViewController.h; sourceTree = "<group>"; };
+		0B1D17A31462549F00D11193 /* CustomPresentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPresentedViewController.m; sourceTree = "<group>"; };
+		0B361D05145FB1E700D4B567 /* FadeSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FadeSegue.h; sourceTree = "<group>"; };
+		0B361D06145FB1E700D4B567 /* FadeSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FadeSegue.m; sourceTree = "<group>"; };
 		0B65ACB3145E48A70061A994 /* MobileTutsStoryboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileTutsStoryboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B65ACB7145E48A70061A994 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0B65ACB9145E48A70061A994 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0B65ACBB145E48A70061A994 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0B65ACBF145E48A70061A994 /* MobileTutsStoryboarding-Info.plist */ = {isa = PBXFileReference; path = "MobileTutsStoryboarding-Info.plist"; sourceTree = "<group>"; };
+		0B65ACBF145E48A70061A994 /* MobileTutsStoryboarding-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MobileTutsStoryboarding-Info.plist"; sourceTree = "<group>"; };
 		0B65ACC1145E48A80061A994 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0B65ACC3145E48A80061A994 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0B65ACC5145E48A80061A994 /* MobileTutsStoryboarding-Prefix.pch */ = {isa = PBXFileReference; path = "MobileTutsStoryboarding-Prefix.pch"; sourceTree = "<group>"; };
-		0B65ACC6145E48A80061A994 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		0B65ACC5145E48A80061A994 /* MobileTutsStoryboarding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileTutsStoryboarding-Prefix.pch"; sourceTree = "<group>"; };
+		0B65ACC6145E48A80061A994 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B65ACC7145E48A80061A994 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0B65ACCA145E48A80061A994 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		0B65ACCC145E48A80061A994 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		0B65ACCD145E48A80061A994 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0B65ACCC145E48A80061A994 /* ModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		0B65ACCD145E48A80061A994 /* ModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		0B65ACD8145E51EC0061A994 /* DynamicCellsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicCellsTableViewController.h; sourceTree = "<group>"; };
+		0B65ACD9145E51ED0061A994 /* DynamicCellsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicCellsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +54,8 @@
 				0B65ACB8145E48A70061A994 /* UIKit.framework in Frameworks */,
 				0B65ACBA145E48A70061A994 /* Foundation.framework in Frameworks */,
 				0B65ACBC145E48A70061A994 /* CoreGraphics.framework in Frameworks */,
+				0B1D1774146109B900D11193 /* QuartzCore.framework in Frameworks */,
+				0B1D1777146109C500D11193 /* CoreImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,8 @@
 		0B65ACB6145E48A70061A994 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B1D1776146109C500D11193 /* CoreImage.framework */,
+				0B1D1773146109B900D11193 /* QuartzCore.framework */,
 				0B65ACB7145E48A70061A994 /* UIKit.framework */,
 				0B65ACB9145E48A70061A994 /* Foundation.framework */,
 				0B65ACBB145E48A70061A994 /* CoreGraphics.framework */,
@@ -80,8 +97,14 @@
 				0B65ACC6145E48A80061A994 /* AppDelegate.h */,
 				0B65ACC7145E48A80061A994 /* AppDelegate.m */,
 				0B65ACC9145E48A80061A994 /* MainStoryboard.storyboard */,
-				0B65ACCC145E48A80061A994 /* ViewController.h */,
-				0B65ACCD145E48A80061A994 /* ViewController.m */,
+				0B65ACD8145E51EC0061A994 /* DynamicCellsTableViewController.h */,
+				0B65ACD9145E51ED0061A994 /* DynamicCellsTableViewController.m */,
+				0B65ACCC145E48A80061A994 /* ModalViewController.h */,
+				0B65ACCD145E48A80061A994 /* ModalViewController.m */,
+				0B1D17A21462549F00D11193 /* CustomPresentedViewController.h */,
+				0B1D17A31462549F00D11193 /* CustomPresentedViewController.m */,
+				0B361D05145FB1E700D4B567 /* FadeSegue.h */,
+				0B361D06145FB1E700D4B567 /* FadeSegue.m */,
 				0B65ACBE145E48A70061A994 /* Supporting Files */,
 			);
 			path = MobileTutsStoryboarding;
@@ -163,7 +186,10 @@
 			files = (
 				0B65ACC4145E48A80061A994 /* main.m in Sources */,
 				0B65ACC8145E48A80061A994 /* AppDelegate.m in Sources */,
-				0B65ACCE145E48A80061A994 /* ViewController.m in Sources */,
+				0B65ACCE145E48A80061A994 /* ModalViewController.m in Sources */,
+				0B65ACDA145E51ED0061A994 /* DynamicCellsTableViewController.m in Sources */,
+				0B361D07145FB1E700D4B567 /* FadeSegue.m in Sources */,
+				0B1D17A4146254A000D11193 /* CustomPresentedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +299,7 @@
 				0B65ACD3145E48A80061A994 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
