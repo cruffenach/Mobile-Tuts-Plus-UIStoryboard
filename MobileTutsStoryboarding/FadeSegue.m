@@ -27,11 +27,6 @@
     return self;
 }
 
-//void FMSetGasValueForFireEmitterLayer(double gas, CAEmitterLayer *fireEmitter) {
-//    
-//    [fireEmitter setVelocity:<#(float)#>
-//}
-
 -(void)perform {
     
     CALayer *sourceLayer = [[[self sourceViewController] view] layer];
