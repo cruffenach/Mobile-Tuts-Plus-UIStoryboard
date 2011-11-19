@@ -87,7 +87,8 @@
 
     if (cell == nil) {
     
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
+                                       reuseIdentifier:CellIdentifier] autorelease];
     }
 
     cell.textLabel.text = [NSString stringWithFormat:@"Section: %d Row: %d Sum: %d Product: %d", indexPath.section, indexPath.row, (indexPath.section+indexPath.row), (indexPath.section*indexPath.row)];

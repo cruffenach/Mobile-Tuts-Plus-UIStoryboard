@@ -6,6 +6,7 @@
 //  Copyright (c) 2011 ELC Technologies. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "FadeSegue.h"
 
 #import <QuartzCore/QuartzCore.h>
@@ -28,42 +29,20 @@
 }
 
 -(void)perform {
-    
-    CALayer *sourceLayer = [[[self sourceViewController] view] layer];
-    CALayer *destinationLayer = [[[self destinationViewController] view] layer];
-    
-    [destinationLayer setOpacity:0.0];
-    [sourceLayer addSublayer:destinationLayer];
-   
-    UIViewController *sourceViewController = (UIViewController*)[self sourceViewController];
-    UIViewController *destinationController = (UIViewController*)[self destinationViewController];                    
-    
-    double delayInSeconds = 0.5;
-    
-    dispatch_time_t modalPresentationTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
-    dispatch_after(modalPresentationTime, dispatch_get_main_queue(), ^(void){
 
-        [sourceViewController presentModalViewController:destinationController
-                                                animated:NO];
-        [destinationLayer setOpacity:1.0];
-    });
+    __block UIViewController *sourceViewController = (UIViewController*)[self sourceViewController];
+    __block UIViewController *destinationController = (UIViewController*)[self destinationViewController];                    
     
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    [animation setDuration:delayInSeconds];
-    [animation setRemovedOnCompletion:YES];
-    [animation setFromValue:[NSNumber numberWithFloat:1.0]];
-    [animation setToValue:[NSNumber numberWithFloat:0.0]];
-    [sourceLayer addAnimation:animation 
-                       forKey:@"animateOpacity"];
-    
-    CABasicAnimation *fadeIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    [fadeIn setDuration:delayInSeconds];
-    [fadeIn setRemovedOnCompletion:YES];
-    [fadeIn setFromValue:[NSNumber numberWithFloat:0.0]];
-    [fadeIn setToValue:[NSNumber numberWithFloat:1.0]];
-    [fadeIn setAutoreverses:NO];
-    [destinationLayer addAnimation:fadeIn
-                            forKey:@"animateOpacity"];
+    [UIView transitionWithView:sourceViewController.navigationController.view
+                      duration:.5
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{                        
+                        [sourceViewController.navigationController pushViewController:destinationController
+                                                                             animated:NO];
+                    } 
+                    completion:^(BOOL finished) {
+                        NSLog(@"Transition Completed");
+                    }];
 }
 
 @end
